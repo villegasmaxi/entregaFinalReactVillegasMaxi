@@ -1,0 +1,19 @@
+.content{
+    border: 2px solid black;
+    background-image: url(https://i.postimg.cc/1ztXpNQq/Dream-Shaper-v5-disfrutar-de-su-cena-vista-superior-de-alimento-1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+    color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.4em;
+    margin-top: 1em;
+}
+.h2{
+    margin: 1em;
+}
