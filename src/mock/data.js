@@ -1,8 +1,8 @@
 const list = [
   {
     id: "01",
-    category: "comida",
     name: "Picada",
+    category: "comida",
     stock: 25,
     price: 1200,
     description:
@@ -11,8 +11,8 @@ const list = [
   },
   {
     id: "02",
-    category: "comida",
     name: "Entrada",
+    category: "comida",
     stock: 20,
     price: 2400,
     description: "Variedad de entradas día a día, consulta la carta",

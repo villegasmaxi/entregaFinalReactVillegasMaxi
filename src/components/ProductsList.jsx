@@ -1,7 +1,7 @@
 import React from 'react'
-import Item from '../Item/Item'
+import Item from './Product'
 
-const ItemList = ({products}) => {
+const ProductsList = ({products}) => {
   return (
     <div className="d-flex justify-content-around align-items-center flex-wrap ">
         {products.map((prod)=> <Item key={prod.id} prod={prod}/>)}
@@ -9,4 +9,4 @@ const ItemList = ({products}) => {
   )
 }
 
-export default ItemList
+export default ProductsList;

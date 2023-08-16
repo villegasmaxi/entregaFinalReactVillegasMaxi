@@ -1,8 +1,8 @@
-import "./index.css";
+
 function Buttons (props) {
     return(
         <div 
-        className="btn btn-outline-warning" 
+        className={props.btn}
         style={{fontFamily:props.font}}
         onClick={props.handleClick}  
         >

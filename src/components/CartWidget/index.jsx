@@ -1,13 +1,15 @@
-import "./index.css"
-function Cartwidget (props) {
-    return(
-<>
-<div className="cart">
-   <img className="iconCart" src="https://i.postimg.cc/L8F3MbQN/cart-vector.png" alt="" />
-   {props.valor}
-</div>
+import React, { useContext } from "react";
+import { FiShoppingCart } from "react-icons/fi";
+import { Badge} from 'react-bootstrap';
+import { CartContext } from "../../context/CartContext";
 
-</>
+const CartWidget = () => {
+  const {cartQuantity} = useContext(CartContext)
+    return (
+<div className="cart">
+  <FiShoppingCart size={25}/>
+  {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
+</div>
     )
-}
-export default Cartwidget
+};
+export default CartWidget;

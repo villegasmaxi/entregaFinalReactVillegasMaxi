@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Button from '../Buttons'
-import "./itemCount.css"
+import Buttons from '../Buttons'
+
 
 const ItemCount = ({stock,onAdd,initial}) => {
   const [count, setCount] = useState(initial)
@@ -19,21 +19,28 @@ const ItemCount = ({stock,onAdd,initial}) => {
   }
   return (
     <div>
-        <div className='mt-3 bg-light counter'>
-            <Button 
+        <div className='mt-3 bg-light d-flex justify-content-evenly'>
+    
+            <Buttons 
+            btn="btn btn-secondary"
             valor="+1"
-            handleClick={() =>sumar()}></Button>
-            <span className=' border border-2 border-info bg-secondary text-info fw-bold fs-4 ms-2 me-2 btn'> {count} </span>
-            <Button 
+            handleClick={() =>sumar()}></Buttons>
+
+            <span className=' border border-1 border-dark  bg-light text-dark fs-5 ms-2 me-2 ps-2 pe-2' > Cantidad items:{count} </span>
+            
+            <Buttons 
+            btn="btn btn-secondary"
             valor="-1"
-            handleClick={() =>restar()}></Button>
+            handleClick={() =>restar()}></Buttons>
            
-            <Button
+            <Buttons
+              btn="btn btn-success ms-3  fs-5"
+              disabled={count === 0 || stock === 0}
               valor="Comprar"
-            handleClick={() =>onAdd(count)}></Button>
+              handleClick={() =>onAdd(count)}></Buttons>
         </div>
     </div>
   )
 }
 
-export default ItemCount
+export default ItemCount;
