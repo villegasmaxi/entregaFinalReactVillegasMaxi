@@ -1,6 +1,5 @@
 import React, { useState,  useEffect  } from "react";
 import ProductsList from "../components/ProductsList";
-import {getProducts} from "../mock/data"
 import "./ProductsPage.css";
 import Loader from "../components/Loader/Loader";
 import { useParams } from "react-router-dom";
@@ -13,22 +12,6 @@ function ProductsPage(props) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading]= useState(false)
   const {categoryId}= useParams()
-
-//   useEffect(() => {
-//     setLoading(true)
-//     getProducts()
-//       .then((res) => {
-//         if(categoryId){
-//           setProducts(res.filter((item)=> item.category === categoryId))
-// }
-//         else{ setProducts(res)
-//         }
-//       })
-//       .catch((error) => console.log(error))
-//       .finally(()=> setLoading(false))
-//   }, [categoryId]);
- 
-//   console.log(products)
 
 useEffect(() => {
   setLoading(true)
