@@ -29,7 +29,6 @@ const Checkout = () => {
     const ventas = collection(db, "orders");
     addDoc(ventas, order)
       .then((res) => {
-        console.log(res.id);
         setOrderId(res.id);
         clear();
       })

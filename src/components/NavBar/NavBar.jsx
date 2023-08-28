@@ -1,6 +1,6 @@
-import Buttons from "../Buttons";
-import CartWidget from "../CartWidget";
-import Brand from "../Brand";
+import Buttons from "../Buttons/Buttons";
+import CartWidget from "../CartWidget/CartWidget";
+import Brand from "../Brand/Brand";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -10,19 +10,23 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function NavBar() {
   return (
     <div className=" container-fluid mt-2 p-0 ">
-      <Navbar expand="lg" className="bg-gradient bg-secondary ">
-        <Container className="justify-content-evenly">
+      <Navbar expand="lg" className="bg-gradient bg-secondary">
+        <Container className="d-flex justify-content-evenly">
           <Navbar.Brand>
             <NavLink to="/" className="brand">
               <Brand />
             </NavLink>
           </Navbar.Brand>
 
+          <NavLink className="ms-3 me-3 fs-5 text-decoration-none text-dark fw-bold" to="/">Home</NavLink>
+
+          <NavLink className="ms-3 me-3 fs-5 text-decoration-none text-dark fw-bold">Link</NavLink>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <NavDropdown
-                className=" fs-5 fw-bolder ps-5 pe-5"
+                className=" fs-5 fw-bolder ms-1"
                 title="Menú"
                 id="basic-nav-dropdown"
               >
@@ -41,10 +45,11 @@ function NavBar() {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Link as={NavLink} to="/Cart">
+            
+            </Nav>
+            <Nav.Link className="ms-1" as={NavLink} to="/Cart">
                 <CartWidget />
               </Nav.Link>
-            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>

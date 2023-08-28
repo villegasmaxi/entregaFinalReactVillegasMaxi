@@ -1,12 +1,12 @@
 
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import ProductsPage from "./Pages/ProductsPage";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./Pages/CartPage";
-import ErrorPage from "./components/ErrorPage";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 import { CartProvider } from "./context/CartContext";
 import Checkout from './components/Checkout/Checkout';
 
@@ -20,8 +20,7 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={
-                  <ProductsPage
+                element={<ProductsPage
                     title="Bienvenido a cálculo a la romana"
                     subTitle="Donde los amigos comparten los gastos de su cena "
                   />

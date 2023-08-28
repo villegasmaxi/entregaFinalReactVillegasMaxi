@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Buttons from "../Buttons";
+import Buttons from "../Buttons/Buttons";
 
 const ItemCount = ({ stock, onAdd, initial }) => {
   const [count, setCount] = useState(initial);
@@ -15,8 +15,8 @@ const ItemCount = ({ stock, onAdd, initial }) => {
     }
   };
   return (
-    <div>
-      <div className="mt-3 bg-light d-flex justify-content-evenly">
+    <div className="mt-3">
+      <div className="p-2 bg-info d-flex justify-content-evenly">
         <Buttons
           btn="btn btn-secondary"
           valor="+1"
@@ -24,8 +24,7 @@ const ItemCount = ({ stock, onAdd, initial }) => {
         ></Buttons>
 
         <span className=" border border-1 border-dark  bg-light text-dark fs-5 ms-2 me-2 ps-2 pe-2">
-          {" "}
-          Cantidad items:{count}{" "}
+          {" "}Cantidad items:{" "}{count}{" "}
         </span>
 
         <Buttons

@@ -12,11 +12,11 @@ const ItemDetail = ({ producto }) => {
   };
 
   return (
-    <div className="container d-flex flex-column align-items-center  p-2 border border-1 border-dark">
+    <div className="container d-flex flex-column align-items-center mt-2 mb-2  p-3 border border-2 border-info rounded-3">
       <h4>Producto: {producto.name} </h4>
       <h5>{producto.description}</h5>
-      <h4>Precio: $ {producto.price}</h4>
-      <img src={producto.img} className=" img-fluid " alt="" />
+      <h4 className="fw-bold">Precio: $ {producto.price}</h4>
+      <img src={producto.img} className=" w-25 mt-3 img-fluid " alt="" />
       {!quantityAdded ? (
         <ItemCount initial={1} stock={producto.stock} onAdd={onAdd} />
       ) : (
